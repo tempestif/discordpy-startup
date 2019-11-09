@@ -189,7 +189,7 @@ async def devide(devide):
     await devide.channel.send(text)
 
 @client.command()
-async def num (number):
+async def num(number):
     for num in range(9999):
         number.channel.send(num)
 
