@@ -190,8 +190,8 @@ async def devide(devide):
 
     
 @client.command()
-async def bigining(bigin):
-    bigining = discord.Embed(title='ようこそてんぺすとのお部屋へ！',description='以下の文章をお読みになってから先へ進んでくださいませ。')
+async def biginning(bigin):
+    bigining = discord.Embed(title='ようこそてんぺすとのお部屋へ！',description='以下の文章をお読みになってから先へ進んでくださいませ。',color=0xf0f8ff)
     bigining.add_field(name='Rule',value='基本的に何しても自由ですが、常識の範囲内でお願いします。\nあまりにも私の常識と乖離していると感じた場合はBAN等の措置を盗らせていただく場合が\nございます')
     bigining.add_field(name="チャンネル説明",value='-------------------------------',inline=False)
     bigining.add_field(name='main-chat',value='雑談等は[#main-chat](https://discordapp.com/channels/454634464174407681/583951802630668288)をご利用ください')
