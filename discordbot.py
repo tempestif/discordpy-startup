@@ -188,5 +188,20 @@ async def devide(devide):
     text = 'botに役職を付与できました'
     await devide.channel.send(text)
 
+    
+@client.command()
+async def bigining(bigin):
+    bigining = discord.Embed(title='ようこそてんぺすとのお部屋へ！',description='以下の文章をお読みになってから先へ進んでくださいませ。')
+    bigining.add_field(name='Rule',value='基本的に何しても自由ですが、常識の範囲内でお願いします。\nあまりにも私の常識と乖離していると感じた場合はBAN等の措置を盗らせていただく場合が\nございます')
+    bigining.add_field(name="チャンネル説明",value='-------------------------------',inline=False)
+    bigining.add_field(name='main-chat',value='雑談等は[#main-chat](https://discordapp.com/channels/454634464174407681/583951802630668288)をご利用ください')
+    bigining.add_field(name='saoif-info',value='[#saoif-news](https://discordapp.com/channels/454634464174407681/634780447250972685)、[#japan-server-news](https://discordapp.com/channels/454634464174407681/641515191569481729)にてsaoifの\n情報を掲載しています')
+    bigining.add_field(name='聞き専',value='vc時にメッセージをやり取りする場合は[#listening-chat](https://discordapp.com/channels/454634464174407681/583951396114530306)、をご利用ください')
+    bigining.add_field(name='voice-chat',value='vcはmain-vcをご利用ください')
+    bigining.add_field(name='bot-spam',value='それぞれにbotの名前がついておりますので\n対応したものをお使いください。')
+    bigining.add_field(name='入出管理',value='vcに出入りした時に日時を記録してくれます')
+    bigining.add_field(name='導入bot',value='[@Yui](https://discordapp.com/channels/@me/580071590738264065):saoif全般の情報を引き出せます。\n[@Rythm](https://discordapp.com/channels/@me/440105191992459266):接続中のvcに音楽を流せます\n[@botchan](https://discordapp.com/channels/@me/440105191992459266):私が勉強がてら頑張ってる自作botです「.yui」で機能を表示します')
+    await bigin.channel.send(embed=bigining)
+
 
 client.run(token)
