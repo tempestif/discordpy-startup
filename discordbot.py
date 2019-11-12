@@ -166,6 +166,7 @@ async def should(should):
     yarukoto.add_field(name='熟練度計算ツールのEmbed化',value='結果をEmbed化して見やすくしたい：結果の埋め込みはできた')
     yarukoto.add_field(name='熟練度計算ツールのレベルアップに対応', value='計測中にレベルアップしても計算を可能にしたい。')
     yarukoto.add_field(name='help機能の充実',value='コマンドの使い方をもっと詳しく。できればリアクションによるページの遷移も。')
+    yarukoto.add_field(name='ランウォッチ機能',value='引数に距離と時間をいれ、時速と消費カロリーを返す。\n初期コマンドを作ってそこで個人チャンネルを作ればDBみたいになるかな？')
     await should.channel.send(embed=yarukoto)
 
 @client.command()
