@@ -159,6 +159,67 @@ async def end(owari,kakutoku=None,jikan=None,hun=None):
         error_text = 'まだ開始していません'
         await owari.channel.send(error_text)
 
+#カロリー計算
+@client.command()
+async def running(run,minutes,km,weight):
+    hour = int(minutes)/60
+    speed = float(float(km)/hour)
+    if speed > 6.4 :
+        calorie = 1.05 * 6.0 * speed * float(weight)
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 8.0:
+        calorie = 1.05 * 8.3 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 8.4:
+        calorie = 1.05 * 9.0 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 9.7:
+        calorie = 1.05 * 9.8 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 10.8:
+        calorie = 1.05 * 10.5 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 11.3:
+        calorie = 1.05 * 11.0 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 12.1:
+        calorie = 1.05 * 11.5 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 12.9:
+        calorie = 1.05 * 11.8 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 13.8:
+        calorie = 1.05 * 12.3 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 14.5:
+        calorie = 1.05 * 12.8 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 17.7:
+        calorie = 1.05 * 16.0 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 19.3:
+        calorie = 1.05 * 19.0 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    elif speed > 20.9:
+        calorie = 1.05 * 19.8 * speed * weight
+        text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}'
+        await run.channel.send(text)
+    else:
+        await run.channel.send('範囲外です。ごめんね。')
+        
+
 #実験
 @client.command()
 async def should(should):
