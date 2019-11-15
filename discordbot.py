@@ -163,7 +163,7 @@ async def end(owari,kakutoku=None,jikan=None,hun=None):
 @client.command()
 async def running(run,minutes,km,weight):
     hour = int(minutes) / 60
-    speed = float(float(km) / hour)
+    speed = round((float(float(km) / hour)),1)
     if speed > 20.9:
         mets = 19.8
     elif speed > 19.3:
@@ -192,6 +192,9 @@ async def running(run,minutes,km,weight):
         mets = 6.0
     else:
         await run.channel.send('範囲外です。ごめんね。')
+    calorie = round((1.05 * mets * speed * float(weight)),1)
+    text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}calです'
+    await run.channel.send(text)
         
 
 #実験
