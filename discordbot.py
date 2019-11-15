@@ -160,41 +160,7 @@ async def end(owari,kakutoku=None,jikan=None,hun=None):
         await owari.channel.send(error_text)
 
 #カロリー計算
-@client.command()
-async def running(run,minutes,km,weight):
-    hour = int(minutes) / 60
-    speed = round((float(float(km) / hour)),1)
-    if speed > 20.9:
-        mets = 19.8
-    elif speed > 19.3:
-        mets = 19.0
-    elif speed > 17.7:
-        mets = 16.0
-    elif speed > 14.5:
-        mets = 12.8
-    elif speed > 13.8:
-        mets = 12.3
-    elif speed > 12.9:
-        mets = 11.8
-    elif speed > 12.1:
-        mets = 11.5
-    elif speed > 11.3:
-        mets = 11.0
-    elif speed > 10.8:
-        mets = 10.5
-    elif speed > 9.7:
-        mets = 9.8
-    elif speed > 8.4:
-        mets = 9.0
-    elif speed > 8.0:
-        mets = 8.3
-    elif speed > 6.4 :
-        mets = 6.0
-    else:
-        await run.channel.send('範囲外です。ごめんね。')
-    calorie = round((1.05 * mets * speed * float(weight)),1)
-    text = f'{hour}時間で{km}km走りました。\n時速は{speed}km/hです。\n消費カロリーは{calorie}calです'
-    await run.channel.send(text)
+
         
 
 #実験
