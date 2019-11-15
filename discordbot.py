@@ -159,10 +159,6 @@ async def end(owari,kakutoku=None,jikan=None,hun=None):
         error_text = 'まだ開始していません'
         await owari.channel.send(error_text)
 
-#カロリー計算
-
-        
-
 #実験
 @client.command()
 async def should(should):
