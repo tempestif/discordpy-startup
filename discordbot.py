@@ -19,11 +19,11 @@ async def on_ready():
 @client.command()
 async def yui(arg):
     yuichan = discord.Embed(title='わたしはカーディナルに存在するAIです。', description='**名前はbotchanです。仲良くしてね。**', color=46121)
-    yuichan.add_field(name='**機能紹介**',value='利用できる機能を紹介します')
+    yuichan.add_field(name='**機能紹介**',value='利用できる機能を紹介します',inline=False)
     yuichan.add_field(name='**.rect 募集内容 募集人数 終了までの時間(秒)**',value="パーティメンバーを募集できます")
     yuichan.add_field(name='**.weapon**',value='熟練度を開始します。また、「熟練中」の役職を付与します。')
     yuichan.add_field(name='**.end 獲得経験値 時間 分**',value='獲得情報をまとめ、時給を計算します。')
-    yuichan.add_field(name="vc入出管理", value="vcに入出した時に#enter-exit-logsに記録されます",inline=False)
+    yuichan.add_field(name="**vc入出管理**", value="vcに入出した時に#enter-exit-logsに記録されます",inline=False)
     yuichan.add_field(name='botの機能募集してます|ω・`）',value='何かあったらお声掛けください。できるかはわかりませんが()',inline=False)
     yuichan.add_field(name='意地悪はしないでください',value=':rage: ')
     await arg.channel.send(embed=yuichan)
