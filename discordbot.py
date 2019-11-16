@@ -18,7 +18,7 @@ async def on_ready():
 #お遊びメッセージ
 @client.command()
 async def yui(arg):
-    yuichan = discord.Embed(title='わたしはカーディナルに存在するAIです。', description='機能', color=46121)
+    yuichan = discord.Embed(title='わたしはカーディナルに存在するAIです。', description='**機能**', color=46121)
     yuichan.add_field(name='.rect 募集内容 募集人数 終了までの時間(秒)',value="パーティメンバーを募集できます")
     yuichan.add_field(name='.weapon',value='熟練度を開始します。また、「熟練中」の役職を付与します。')
     yuichan.add_field(name='.end 獲得経験値 時間 分',value='獲得情報をまとめ、時給を計算します。')
