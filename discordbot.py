@@ -193,7 +193,7 @@ async def devide(devide):
 @client.command()
 async def D(ctx):
     for user in ctx.guild.members:
-        if user.status == discord.Status.invisible:
+        if user.status == discord.Status.online:
             print (user.name+"#"+user.discriminator)
     
 @client.command()
