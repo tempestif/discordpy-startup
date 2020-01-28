@@ -190,6 +190,11 @@ async def devide(devide):
     text = 'botに役職を付与できました'
     await devide.channel.send(text)
 
+@client.command()
+async def D(ctx):
+    for user in ctx.guild.members:
+        if user.status != discord.Status.offline:
+            print (user.name+"#"+user.discriminator)
     
 @client.command()
 async def biginning(bigin):
