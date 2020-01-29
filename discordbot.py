@@ -96,12 +96,21 @@ async def on_voice_state_update(member, before, after):
     if member.guild.id == 454634464174407681 and (before.channel != after.channel):
         now = datetime.utcnow() + timedelta(hours=9)
         alert_channel = client.get_channel(639850501780930580)
-        if after.channel != himitsu and before.channel is None:
+        secret = client.get_channel(672052787411943434)
+        if after.channel == himitsu and before.channel is None:
             msg = f'{now:%m/%d-%H:%M} に {member.name} が {after.channel.name} に参加しました。'
-            await alert_channel.send(msg)
-        elif before.channel != himitsu and after.channel is None:
+            await secret.send(msg)
+        elif before.channel == himitsu and after.channel is None:
             str = f'{now:%m/%d-%H:%M} に {member.name} が {before.channel.name} から退出しました。'
-            await alert_channel.send(str)
+            await secret.send(str)
+        else:
+            if before.channel is None:
+                msg = f'{now:%m/%d-%H:%M} に {member.name} が {after.channel.name} に参加しました。'
+                await alert_channel.send(msg)
+            elif after.channel is None:
+                msg = f'{now:%m/%d-%H:%M} に {member.name} が {after.channel.name} から退出しました。'
+                await alert_channel.send(msg)
+        
         
 
 jst = datetime.utcnow() + timedelta(hours=9)
