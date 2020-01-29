@@ -102,8 +102,8 @@ async def on_voice_state_update(member, before, after):
                 await alert_channel.send(msg)
         elif before.channel != himitsu:
             if after.channel is None:
-                msg = f'{now:%m/%d-%H:%M} に {member.name} が {before.channel.name} から退出しました。'
-                await alert_channel.send(msg)
+                str = f'{now:%m/%d-%H:%M} に {member.name} が {before.channel.name} から退出しました。'
+                await alert_channel.send(str)
         
 
 jst = datetime.utcnow() + timedelta(hours=9)
