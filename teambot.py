@@ -6,8 +6,6 @@ import os
 import sys
 
 client = commands.Bot(command_prefix='!!')
-TOKEN='NzExOTA5NzEyNTc2MTE4ODM2.XsLn0Q.CgL8EaShs2hh0gyo2nRL0JNxSjU'
-
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -227,4 +225,4 @@ async def rect(ctx):
 
 
 # Botの起動とDiscordサーバーへの接続
-client.run(TOKEN)
+client.run(slrb_token)
