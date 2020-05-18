@@ -15,6 +15,7 @@ async def on_ready():
     print(client.user.id)
     print('------')
     print(sys.version)
+    print(discord.__version__)
 
 
 
