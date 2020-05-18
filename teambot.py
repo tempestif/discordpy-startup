@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 import os
 import sys
 
+slrb_token = os.environ['slrb_token']
+
 client = commands.Bot(command_prefix='!!')
 @client.event
 async def on_ready():
